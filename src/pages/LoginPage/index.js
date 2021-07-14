@@ -43,6 +43,7 @@ const LoginPage = ({currentUser}) => {
     firebase.auth().signInWithPopup(provider).then((data) => {
       console.log('deu bom', data)
 
+      //solução para criar user com login do google
       const docRef = firebase.firestore().collection("users")
       .doc(data.user.uid);
 

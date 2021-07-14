@@ -34,7 +34,11 @@ const UsersList = ({ setSelectedUser, currentUser, currentUserData }) => {
     <UserListContainer>
       <div>
         <p>
-          Bem vindo, {currentUserData?.name || currentUser?.displayName}!<button onClick={handleLogout}>Logout</button>
+          {/* solução para mostrar user normal ou user googleAuth */}
+          Bem vindo, {currentUserData?.name || currentUser?.displayName}!
+          <button onClick={handleLogout}>
+            Logout
+          </button>
         </p>
       </div>
       <h4>Conversas</h4>
